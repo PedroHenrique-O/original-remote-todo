@@ -1,7 +1,6 @@
 const { ModuleFederationPlugin } = require("webpack").container;
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const { withZephyr } = require("zephyr-webpack-plugin");
-const path = require("path");
 
 const baseConfig = {
   entry: "./src/index.ts",
@@ -43,17 +42,11 @@ const baseConfig = {
       name: "remotetodo",
       filename: "remoteEntry.js",
       exposes: {
-        "./TodoApp": "./src/expose-TodoApp.js",
+        "./TodoApp": "./src/TodoApp.tsx",
       },
       shared: {
-        react: {
-          singleton: true,
-          requiredVersion: "^18.2.0",
-        },
-        "react-dom": {
-          singleton: true,
-          requiredVersion: "^18.2.0",
-        },
+        react: { singleton: true },
+        "react-dom": { singleton: true },
       },
     }),
     new HtmlWebpackPlugin({
