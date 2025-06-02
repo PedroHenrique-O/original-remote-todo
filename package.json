@@ -1,5 +1,5 @@
 {
-  "name": "remoteTodo",
+  "name": "remotetodo",
   "version": "1.0.0",
   "description": "Remote Todo application for Module Federation",
   "main": "src/index.js",

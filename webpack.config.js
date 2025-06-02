@@ -40,7 +40,7 @@ const baseConfig = {
   },
   plugins: [
     new ModuleFederationPlugin({
-      name: "remoteTodo",
+      name: "remotetodo",
       filename: "remoteEntry.js",
       exposes: {
         "./TodoApp": "./src/TodoApp",
