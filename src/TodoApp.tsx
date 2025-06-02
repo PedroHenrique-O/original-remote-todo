@@ -191,3 +191,6 @@ const TodoApp: React.FC = () => {
 };
 
 export default TodoApp;
+
+// Also provide named export for Module Federation compatibility
+export { TodoApp };
