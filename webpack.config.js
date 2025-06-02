@@ -43,7 +43,7 @@ const baseConfig = {
       name: "remotetodo",
       filename: "remoteEntry.js",
       exposes: {
-        "./TodoApp": "./src/TodoApp.tsx",
+        "./TodoApp": "./src/expose-TodoApp.js",
       },
       shared: {
         react: {
